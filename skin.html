@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Watering System</title>
+  <link rel="stylesheet" href="blood.css" />
+</head>
+<body>
+
+<header>
+  <h1> Plant Watering System</h1>
+  
+</header>
+
+<div class="grid">
+
+  <!-- Moisture gauge -->
+  <div class="card">
+    <div class="card-label">ADC — moisture level (simulated)</div>
+    <div class="gauge-wrap">
+      <div class="gauge-ring">
+        <svg viewBox="0 0 130 130">
+          <circle class="gauge-track" cx="65" cy="65" r="52" />
+          <circle class="gauge-fill" id="gauge-fill" cx="65" cy="65" r="52"
+            stroke-dasharray="326.7"
+            stroke-dashoffset="188"
+            stroke="#52b788" />
+        </svg>
+        <div class="gauge-center">
+          <span class="gauge-pct" id="gauge-pct">42%</span>
+          <span class="gauge-sub">moisture</span>
+        </div>
+      </div>
+      <span class="gauge-zone zone-ok" id="gauge-zone">OK</span>
+    </div>
+  </div>
+
+  <!-- LED indicators -->
+  <div class="card">
+    <div class="card-label">LED — status indicators</div>
+    <div class="led-list">
+      <div class="led-row">
+        <div class="led" id="led-dry"></div>
+        <span>CH1 — Dry (&lt;30%)</span>
+      </div>
+      <div class="led-row">
+        <div class="led green" id="led-ok"></div>
+        <span>CH2 — OK (30–70%)</span>
+      </div>
+      <div class="led-row">
+        <div class="led" id="led-wet"></div>
+        <span>CH3 — Wet (&gt;70%)</span>
+      </div>
+      <div class="led-row">
+        <div class="led" id="led-pump"></div>
+        <span>CH4 — Pump active</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PSW buttons -->
+  <div class="card">
+    <div class="card-label">PSW — push switches</div>
+    <div class="psw-grid">
+      <button class="psw" onclick="psw1()">
+        <div class="psw-circle sw1">Water</div>
+        <span class="psw-name">SW1</span>
+      </button>
+      <button class="psw" onclick="psw2()">
+        <div class="psw-circle sw2">Mode</div>
+        <span class="psw-name">SW2</span>
+      </button>
+      <button class="psw" onclick="psw3()">
+        <div class="psw-circle sw3">Dry</div>
+        <span class="psw-name">SW3</span>
+      </button>
+      <button class="psw" onclick="psw4()">
+        <div class="psw-circle sw4">Reset</div>
+        <span class="psw-name">SW4</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- PWM control -->
+  <div class="card">
+    <div class="card-label">PWM — pump speed control <span class="mode-badge mode-auto" id="mode-badge">AUTO</span></div>
+    <div class="pwm-wrap">
+      <div class="pwm-row">
+        <div class="pwm-header">
+          <span>Pump duty cycle</span>
+          <span id="pwm-label">0%</span>
+        </div>
+        <input type="range" id="pwm-slider" min="0" max="100" step="1" value="0" disabled oninput="onPwmChange(this.value)" />
+      </div>
+      <div class="pwm-row">
+        <div class="pwm-header">
+          <span>Moisture</span>
+          <span id="bar-moisture-label">42%</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar-fg bar-moisture" id="bar-moisture" style="width:42%"></div>
+        </div>
+      </div>
+      <div class="pwm-row">
+        <div class="pwm-header">
+          <span>Pump output</span>
+          <span id="bar-pump-label">0%</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar-fg bar-pump" id="bar-pump" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event log -->
+  <div class="card full">
+    <div class="card-label">Event log</div>
+    <div class="log-box" id="log">
+      <p><span class="log-time">00:00:00</span>System started. Mode: <span class="log-ok">AUTO</span>. Moisture: 42%.</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="bone.js"></script>
+</body>
+</html>
