@@ -69,10 +69,10 @@ Contains all application logic:
 
 The simulator runs a **tick every 500 ms** using `setInterval`:
 
-1. If the pump is **off** → moisture drops by `0.25%` (evaporation)
-2. If the pump is **on** → moisture rises by `pumpSpeed × 0.045`
-3. **AUTO mode** → pump turns ON automatically when moisture `< 30%`, turns OFF at `80%`
-4. **MANUAL mode** → user controls the pump via the SW1 button and PWM slider
+1. If the pump is **off** , moisture drops by `0.25%` (evaporation)
+2. If the pump is **on** , moisture rises by `pumpSpeed × 0.045`
+3. **AUTO mode** , pump turns ON automatically when moisture `< 30%`, turns OFF at `80%`
+4. **MANUAL mode** , user controls the pump via the SW1 button and PWM slider
 
 ---
 
