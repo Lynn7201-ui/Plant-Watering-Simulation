@@ -80,10 +80,10 @@ The simulator runs a **tick every 500 ms** using `setInterval`:
 
 | Button | Label | Action |
 |--------|-------|--------|
-| SW1 | Water | Toggle pump on/off *(Manual mode only)* |
-| SW2 | Mode | Switch between AUTO and MANUAL |
-| SW3 | Dry | Drop moisture by 25% *(for demo)* |
-| SW4 | Reset | Restore moisture to 42%, AUTO mode, clear log |
+| Water | SW1 | Toggle pump on/off *(Manual mode only)* |
+| Mode | SW2 | Switch between AUTO and MANUAL |
+| Dry | SW3 | Drop moisture by 25% *(for demo)* |
+| Reset | SW4 | Restore moisture to 42%, AUTO mode, clear log |
 
 ---
 
