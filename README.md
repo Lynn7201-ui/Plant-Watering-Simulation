@@ -1,3 +1,17 @@
+## Project Members - Htet Oo Haling
+
+
+| Name | ID |
+|------|---------|
+| Htet Oo Hlain | xxxxxxx4016 |
+| Nyan Lin Hein | xxxxxxx4028 |
+| San Htoo Shwe | xxxxxxx4034 |
+
+---                        
+
+
+
+
 ## Project Goal
 
 Monitor soil moisture levels and automatically control a water pump to keep a plant healthy
