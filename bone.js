@@ -75,17 +75,6 @@ function setLed(id, on, color) {
   el.className = 'led' + (on ? ' ' + color : '');
 }
 
-// ── Event log ──
-function log(msg, type) {
-  const box = document.getElementById('log');
-  const p   = document.createElement('p');
-  const now = new Date();
-  const t   = [now.getHours(), now.getMinutes(), now.getSeconds()]
-                .map(n => String(n).padStart(2, '0')).join(':');
-  p.innerHTML = `<span class="log-time">${t}</span><span class="${type ? 'log-' + type : ''}">${msg}</span>`;
-  box.appendChild(p);
-  box.scrollTop = box.scrollHeight;
-}
 
 // ── PSW button handlers ──
 
