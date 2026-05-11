@@ -322,24 +322,6 @@ input[type=range]:disabled {
 .bar-moisture { background: var(--green-light); }
 .bar-pump     { background: var(--blue); }
 
-/* ── Event log ── */
-.log-box {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--muted);
-  background: #f0ede6;
-  border-radius: 8px;
-  padding: 10px 12px;
-  height: 90px;
-  overflow-y: auto;
-  line-height: 1.6;
-}
-
-.log-box p  { margin: 0; }
-.log-time   { color: #aaa; margin-right: 6px; }
-.log-ok     { color: var(--green-mid); }
-.log-warn   { color: #b07800; }
-.log-err    { color: var(--red); }
 
 /* ── Mode badge ── */
 .mode-badge {
