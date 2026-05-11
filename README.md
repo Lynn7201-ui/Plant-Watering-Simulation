@@ -33,7 +33,7 @@ Monitor soil moisture levels and automatically control a water pump to keep a pl
 
 | Feature | Channels | How It Is Used |
 |---------|----------|----------------|
-| LED | 4 channels | CH1 Red = Dry · CH2 Green = OK · CH3 Amber = Wet · CH4 Blue = Pump active |
+| LED | 4 channels | CH1 Red = Dry · CH2 Blue = OK · CH3 Amber = Wet · CH4 Green = Pump active |
 | PSW | 4 switches | SW1 Water  · SW2 Mode · SW3 Dry · SW4 Reset |
 | PWM | 1 channel | Controls pump duty cycle (0–100%) — speed of moisture rise |
 
